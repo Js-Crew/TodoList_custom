@@ -1,0 +1,115 @@
+.taskList {
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #383737;
+}
+
+.contanier {
+  width: 600px;
+}
+
+.contanier .header {
+  background-color: #f69517;
+  padding: 15px 40px 30px;
+  color: white;
+  text-align: center;
+}
+.contanier .header h2 {
+  margin: 10px;
+}
+
+input {
+  width: 75%;
+  float: left;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.taskList li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background-color: #eee;
+  font-size: 18px;
+  transition: 0.3s;
+  user-select: none;
+}
+.taskList li:hover {
+  background-color: white;
+}
+.addBtn {
+  width: 25%;
+  float: left;
+  border: none;
+  padding: 10px;
+  background-color: #d9d9d9;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  color: #555;
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+.contanier .header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contanier .taskList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.closeBtn {
+  display: none;
+  position: absolute;
+  right: 15px;
+}
+.taskList{
+    list-style-type: none;
+    width: 35%;
+}
+
+ul li:hover .closeBtn {
+  display: inline-block;
+}
+
+ul li .closeBtn i:hover {
+  color: red;
+}
+
+.taskList li.done {
+  background-color: #888;
+  color: white;
+  text-decoration: line-through;
+}
+
+.taskList li.done::before {
+  content: "";
+  width: 8px;
+  height: 16px;
+  position: absolute;
+  left: 15px;
+  top: 7px;
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  transform: rotate(45deg);
+  border-color: red;
+}
